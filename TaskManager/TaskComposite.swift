@@ -1,11 +1,11 @@
-### **Demonstration of works app:**
- 
-https://user-images.githubusercontent.com/87602980/164076801-6007113b-0f33-49bf-98b5-7a577e412775.mp4
+//
+//  Task.swift
+//  TaskManager
+//
+//  Created by user on 18.04.2022.
+//
+import Foundation
 
-### **Project implementation:**
-
-* **Composite:**
-```swift
 protocol TaskCompositeProtocol {
     var name: String { get set }
     func showTask() -> Any
@@ -24,11 +24,13 @@ class Task: TaskCompositeProtocol {
     init(name: String) {
         self.name = name
     }
+    
     func showTask() -> Any {
         return taskArray
     }
+    
     func addTask(t: TaskCompositeProtocol) {
         taskArray.append(t)
     }
 }
-```
+
